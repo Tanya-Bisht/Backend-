@@ -3,7 +3,8 @@ const mongoose=require('mongoose');
 const ProductSchema=mongoose.Schema({
     chips:String,
     chocolate:String,
-    drinks:String
+    drink:String,
+    userid:String
 });
 
 module.exports=mongoose.model("Products",ProductSchema);

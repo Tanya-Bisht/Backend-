@@ -1,5 +1,6 @@
 
 const jwt = require("jsonwebtoken");
+const User=require("../Model/User");
 const  authorization=async (req,res,next)=>{
     try {
       
@@ -13,7 +14,9 @@ const  authorization=async (req,res,next)=>{
             {
               res.status(401).json({ message: "User not Found " });
            }
+           console.log(user);
            req.userId = decoded.id;
+           console.log(req.userId);
               next();
         }
         else {
